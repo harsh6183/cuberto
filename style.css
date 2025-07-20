@@ -158,22 +158,40 @@ font-family: 'Suisse Intl', 'Poppins', 'Segoe UI', sans-serif;
     font-size: 1vw;
 }
 
-#fright{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 45%;
-    height: inherit;
-   
-
+#fright {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex
 }
 
-#fright .images{
-    width: 90%;
-    height: 80%;
-    background-color: black;
-   
+.images {
+ position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 9/ 10;
 }
+
+
+
+.images img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.images img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+
 
 .btn{
     display: flex;
@@ -224,7 +242,6 @@ font-family: 'Suisse Intl', 'Poppins', 'Segoe UI', sans-serif;
 .slide .img{
     width: 100%;
     height: 250px;
-    background-color: black;
     overflow: hidden;
     border-radius: 5px;
 }
